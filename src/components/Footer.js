@@ -1,8 +1,9 @@
-import { Box, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import {Box, Button, IconButton, Stack, Toolbar, Typography} from "@mui/material";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedinIcon from "@mui/icons-material/LinkedIn";
+import {Sparkles} from "lucide-react";
 
 function Footer() {
   return (
@@ -38,9 +39,19 @@ function Footer() {
                 <EmailIcon sx={{ color: "white.main" }} />
               </IconButton>
             </Stack>
-            <Typography variant="h6" sx={{ color: "white.main" }}>
-              © 2023 - Laureline Zittel
-            </Typography>
+            <Stack direction={{ xs: "column", sm: "row" }} alignItems="center">
+              <Typography variant="h6" sx={{ color: "white.main" }}>
+                © 2023 - Laureline Zittel
+              </Typography>
+            <Button
+                style={
+                  {
+                    color: "hsl(211,95%,63%)",
+                    padding: "0px 1.2rem 0px 1.2rem",
+                  }
+                } href="https://hugochampy.fr" target="_blank"
+                rel="noopener noreferrer"><Sparkles className="blink_me"/></Button>
+          </Stack>
           </Stack>
         </Toolbar>
       </Box>

@@ -25,3 +25,13 @@ a{
     color: #000;
     text-decoration: none;
 }
+
+.blink_me {
+    animation: blinker 1s ease-in-out infinite;
+}
+
+@keyframes blinker {
+    50% {
+        scale: 260%;
+    }
+}
